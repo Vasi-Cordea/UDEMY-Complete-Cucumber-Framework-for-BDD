@@ -7,3 +7,8 @@ Feature: The Login Page
     Given the user is on the login page
     When the user enters valid credentials
     Then the user should be able to view their account balance
+
+  Scenario: the user shuld not be able to login with bad credentials
+    Given the user in on the login page
+    When the user enters bad credentials
+    Then the user should not be able to login
