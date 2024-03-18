@@ -50,7 +50,8 @@ public class LoginSteps {
 		System.out.println("user sees account balance");
 
 		String bodyText = findElement(By.xpath("html/body")).getText();
-		Assert.assertTrue(bodyText.contains("Log out"));
+		String logOutMessage ="Log out";
+		Assert.assertTrue(bodyText.contains(logOutMessage));
 
 	}
 
@@ -67,4 +68,12 @@ public class LoginSteps {
 		Assert.assertTrue(bodyText.contains("Log out"));
 
 	}
+	@And("the user should bet an invalid login message")
+		public void user_gets_invalid_message() {
+	String bodyText = findElement(By.xpath("html/body")).getText();
+	String usernameInvalid ="Your username is invalid!";
+	Assert.assertTrue(bodyText.contains("usernameInvalid"));
+
+		
+	}	
 }
