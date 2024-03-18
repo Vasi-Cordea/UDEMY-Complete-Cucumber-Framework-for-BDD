@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = "projectfeatures", 
 		glue = "stepDefinitions",
-        tags = "@goodlogin"
+        tags = {"endtoend", "@goodlogin", "~@ignore"}
 
 )
 public class LogginRunner {
