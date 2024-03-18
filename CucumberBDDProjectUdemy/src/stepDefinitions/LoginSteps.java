@@ -12,8 +12,8 @@ public class LoginSteps {
 	// Use Cucumber to bind the Feature File step to Java code
 	// Glue code - step definitions - step implementation
 
-	// driver available at class level, not only at function level
-	WebDriver driver;
+
+	WebDriver driver = Hooks.driver;
 
 	
 
