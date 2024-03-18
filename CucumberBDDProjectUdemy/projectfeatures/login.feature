@@ -7,8 +7,8 @@ Feature: The Login Page
 Background:
 Given the user is on the login page
 
-#@goodlogin
-@ignore
+@goodlogin
+#@ignore
   Scenario: the user should be able to login with valid credentials
     #Given the user is on the login page -background removed duplicated steps
     When the user enters valid credentials
