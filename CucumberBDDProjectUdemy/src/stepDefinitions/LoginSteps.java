@@ -99,5 +99,16 @@ public void enter_password(String password) {
     	// Extract data into a Map and iterate over a Map
     	for (Map<String, String> data: credentials.asMaps(String.class, String.class)) {
 	
+    		//Parse map into local variables
+    		String username =data.get("username");
+    		String password =data.get("passsword");
+    		
+    		//Perform action
+    		driver.findElement(By.id("username")).clear();
+    		driver.findElement(By.id("username")).sendKeys(username);
+    		driver.findElement(By.id("password")).clear();
+    		driver.findElement(By.id("password")).sendKeys(password);
+    	click_login();
+    		
     }	
 }
