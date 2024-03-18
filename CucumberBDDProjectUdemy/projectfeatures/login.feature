@@ -20,7 +20,7 @@ Feature: The Login Page
     Then the user should not be able to login
     And the user should bet an invalid login message
 
-  @ignore
+
   Scenario: the user should be ale to log in
     When user enters username as "student "
     And username enters password as "Password123"
@@ -29,16 +29,16 @@ Feature: The Login Page
 
   Scenario Outline: the user should be able to login
     When user enters "<username>" and "<password>"
-    Then the suer should be able to vew account balance
+    Then the user should be able to view their account balance
 
     Examples: 
-      | username | student     |
+      | username | password   |
       | student  | Password123 |
       | student  | passFail    |
 
   #using data table, parameterized to take a variable
   Scenario: after a failed attempt, the user should be able to login again
-    When the user enters set of "<username>" and "<password>"
+    When the user enters set of username and password
       | username     | password    |
       | unregStudent | failspass1  |
       | student      | Password123 |

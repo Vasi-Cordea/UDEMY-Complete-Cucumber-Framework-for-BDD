@@ -93,7 +93,7 @@ public void enter_password(String password) {
 		driver.findElement(By.id("password")).sendKeys(password);
 	click_login();
 }
-    @When("^the user enters set of \"(.*)\" and \"(.*)\"$")
+    @When("^the user enters set of username and password")
     public void  user_enters_credentials(DataTable credentials) {
     	
     	// Extract data into a Map and iterate over a Map
@@ -111,4 +111,4 @@ public void enter_password(String password) {
     	click_login();
     		
     }	
-}
+}}
