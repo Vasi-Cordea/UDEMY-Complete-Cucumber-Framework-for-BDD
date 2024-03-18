@@ -15,17 +15,7 @@ public class LoginSteps {
 	// driver available at class level, not only at function level
 	WebDriver driver;
 
-	@Before // Hooks
-	public void setup() {
-		// initiate the driver
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\vasic\\Documents\\Jars\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-	}
-
-	@After // Hooks
-	public void tearDown() {
-		driver.quit();
-	}
+	
 
 	@Given("the user is on the login page")
 	public void user_on_login_page() {
