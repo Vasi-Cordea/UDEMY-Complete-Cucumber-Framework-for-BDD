@@ -1,6 +1,9 @@
 package stepDefinitions;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.Map;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -83,5 +86,18 @@ public void enter_password(String password) {
 
 		driver.findElement(By.id("submit")).click();
 	}
-
-}}
+	@When ("user enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_username_and_password(String username, String password) {
+		
+		driver.findElement(By.id("username")).sendKeys(username);
+		driver.findElement(By.id("password")).sendKeys(password);
+	click_login();
+}
+    @When("^the user enters set of \"(.*)\" and \"(.*)\"$")
+    public void  user_enters_credentials(DataTable credentials) {
+    	
+    	// Extract data into a Map and iterate over a Map
+    	for (Map<String, String> data: credentials.asMaps(String.class, String.class)) {
+	
+    }	
+}
