@@ -3,6 +3,8 @@ package stepDefinitions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,10 +14,7 @@ public class LoginSteps {
 	// Use Cucumber to bind the Feature File step to Java code
 	// Glue code - step definitions - step implementation
 
-
 	WebDriver driver = Hooks.driver;
-
-	
 
 	@Given("the user is on the login page")
 	public void user_on_login_page() {
@@ -40,7 +39,7 @@ public class LoginSteps {
 		System.out.println("user sees account balance");
 
 		String bodyText = findElement(By.xpath("html/body")).getText();
-		String logOutMessage ="Log out";
+		String logOutMessage = "Log out";
 		Assert.assertTrue(bodyText.contains(logOutMessage));
 
 	}
@@ -58,12 +57,31 @@ public class LoginSteps {
 		Assert.assertTrue(bodyText.contains("Log out"));
 
 	}
-	@And("the user should bet an invalid login message")
-		public void user_gets_invalid_message() {
-	String bodyText = findElement(By.xpath("html/body")).getText();
-	String usernameInvalid ="Your username is invalid!";
-	Assert.assertTrue(bodyText.contains("usernameInvalid"));
 
+	@And("the user should bet an invalid login message")
+	public void user_gets_invalid_message() {
+		String bodyText = findElement(By.xpath("html/body")).getText();
+		String usernameInvalid = "Your username is invalid!";
+		Assert.assertTrue(bodyText.contains("usernameInvalid"));
+
+	}
+
+	@When ("^user enters username as \"(.*)\"$")
+	public void enter_username(String username) {
 		
-	}	
+		driver.findElement(By.id("username")).sendKeys(username);
+	}
+
+	@And ("^username enters password as \"(.*)\"$")
+public void enter_password(String password) {
+		driver.findElement(By.id("password")).sendKeys(password);
+	
 }
+
+	@And("user clicks on login")
+	public void click_login() {
+
+		driver.findElement(By.id("submit")).click();
+	}
+
+}}
