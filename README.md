@@ -103,23 +103,4 @@ Quiz 1: Feature Files
 3
 
 34. Implementing Cucumber DataTable with Java
-10
-Teach the world online
-Create an online video course, reach students across the globe, and earn money
-Top companies choose Udemy Business to build in-demand career skills.
-NasdaqVolkswagenBoxNetAppEventbrite
-Udemy Business
-Teach on Udemy
-Get the app
-About us
-Contact us
-Careers
-Blog
-Help and Support
-Affiliate
-Investors
-Terms
-Privacy policy
-Sitemap
-Accessibility statement
-© 2024 Udemy, Inc.
+
