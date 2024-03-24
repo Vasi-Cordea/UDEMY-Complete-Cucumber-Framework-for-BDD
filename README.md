@@ -1,6 +1,5 @@
 ![udemy cucumber complete](https://github.com/Vasi-Cordea/UDEMY-Complete-Cucumber-Framework-for-BDD/assets/150058199/497778ce-4144-4381-a755-d334e0d7abc2)
-Udemy
-## Complete Cucumber Framework for BDD
+## UDEMY Complete Cucumber Framework for BDD
 ### Section 1: Introduction
 1. Overview of Behavior-Driven Development
 3
